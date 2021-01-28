@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+  <image mode="widthFix" class="{{isX ? 'iPX' : ''}}" src="{{kv_src}}"></image>
+</view>

@@ -1,0 +1,260 @@
+/* pages/home/home.wxss */
+.container{
+    position: relative;
+}
+view{
+    width:100%;
+    box-sizing: border-box;
+}
+image {
+    display: block;
+    width: 100%;
+}
+
+/* 规则 */
+/* .rule-box{
+    display:none;
+} */
+.rule-box{
+    position: absolute;
+    left:0;top:0;
+    width:100%;
+    height:100%;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rule-box .bg{
+    background: rgba(0,0,0,.6);
+    position: absolute;
+    left:0;top:0;
+    width:100%;
+    height:100%;
+    z-index: 11;
+}
+.rule-box .rule-bg{
+   width: 603rpx;
+   position: relative;
+   /* position: absolute; */
+   z-index: 12;
+   /* top:50%;
+   left:50%; */
+   
+   /* transform: translate(-50%,-50%); */
+   /* overflow-y: hidden; */
+   animation:mymrule 0.2s ;
+}
+@keyframes mymrule {
+    0% {
+        transform:rotateX(90deg);
+    }
+    100% {
+        transform:rotateX(0deg);
+    }
+}
+
+.rule-box .rule-bg .close-rule{
+    position: absolute;
+    top:0;right:-20rpx;
+    width:76rpx;
+    height:76rpx;
+}
+
+.rule-box .rule_txt{
+    position: absolute;
+    left:0;
+    top:100rpx;
+    padding:0 40rpx;
+    overflow-y: auto;
+    height: calc(100% - 130rpx);
+}
+.rule-box .rule_txt text{
+    display: block;
+    font-size: 12px;
+}
+.rule-box .rule_txt .h{
+    font-weight: bold;
+    margin-top: 10rpx;
+    margin-bottom:4rpx;
+    font-size: 14px;
+}
+.rule-box .rule_txt .p{
+    text-align: justify;
+    line-height: 20px;
+}
+
+
+.kv{
+    /* background:#000; */
+    position: relative;
+    z-index: 2;
+}
+.kv .rule-btn {
+    width:158rpx;
+    height:59rpx;
+    position: absolute;
+    bottom:0;right:0;
+}
+
+.main-wrap{
+    position: relative;
+    transform-origin: top center;
+    /* padding: 0 20rpx; */
+}
+
+/* title */
+.main-wrap .fuka .title{
+    width:170rpx;
+    height:40rpx;
+    padding: 0 20rpx;
+    margin-bottom: 12rpx;
+}
+.main-wrap .fuka .fuka-box {
+    position: relative;
+    
+}
+.main-wrap .fuka .fuka-ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0 20rpx 0 28rpx;
+    justify-content: space-between;
+}
+.main-wrap .fuka .fuka-ul .fuka-li{
+    width:125rpx;
+    /* height:215rpx; */
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+.main-wrap .fuka .fuka-ul .fuka-li.active .fuka_active{
+    width:111rpx;
+    height:192rpx;
+    position: absolute;
+    left:0;top:0;
+    box-shadow: 0 0 30rpx #fedd79;
+}
+
+
+.main-wrap .audio {
+    margin-top:28rpx;
+    padding: 0 30rpx;
+    min-height:150rpx;
+}
+.main-wrap .audio .title {
+    width:163rpx;
+    height:47rpx;
+    margin-bottom: 12rpx;
+}
+.main-wrap .audio .audio-li {
+    position: relative;
+    height: 52rpx;
+    width: 100%;
+    /* background-color: #1c0000; */
+    /* background:rgba(64,5,4); */
+    background-color: #400504;
+    border-radius: 50rpx;
+    margin-bottom:22rpx;
+    color:#fff;
+    /* padding:0 15rpx; */
+    z-index: 2;
+    padding-left:60rpx;
+    /* overflow: hidden; */
+}
+
+.main-wrap .audio .audio-li.active{
+    box-shadow: 0 0 18rpx #fedd79;
+}
+.main-wrap .audio .audio-li .li-bg{
+    position: absolute;
+    height: 56rpx;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.15;
+    border-radius: 50rpx;
+    color:#fff;
+    top:16rpx;
+    left:10rpx;
+    z-index: 0;
+}
+.main-wrap .audio .audio-li  .icon {
+    width:46rpx;
+    height:46rpx;
+    position: absolute;
+    left:5rpx;
+    left: 5rpx;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.main-wrap .audio .audio-li .txt{
+    width:115%;
+    padding:16rpx 0;
+
+}
+/* .main-wrap .audio .audio-li text {
+    display: block;
+    margin-left:60rpx;
+    line-height: 55rpx;
+    overflow: hidden;/*超出部分隐藏*/
+    /* white-space: nowrap;/*不换行*/
+    /* text-overflow:ellipsis; */
+    /* color:#ffdba3;  */
+/* } */ 
+
+.main-wrap .audio .audio-li .audio_item{
+    position:absolute;top:0;left:0;
+    opacity:0;
+}
+.go_btn {
+    width:333rpx;
+    height:79rpx;
+    /* position: relative; */
+    /* margin: 50rpx auto */
+    position: absolute;
+    bottom:4rpx;
+    left:50%;
+    transform: translateX(-50%);  
+}
+.go_btn button{
+    height: 100%;
+    position: absolute;
+    left:0;top:0;
+    border:0;
+    outline: none;
+    opacity: 0;
+    z-index: 2;
+}
+
+
+/* iPhone6 */
+.iPhone6 .kv,.iPhone6 .main-wrap{
+    transform: translateY(-40rpx);
+}
+
+/*iPhoneX  */
+.iPhonex .go_btn {
+    /* bottom: 40rpx; */
+    bottom:auto;
+    position: relative;
+    margin-top:60rpx;
+}
+.iPhonex .main-wrap .fuka {
+    margin-top:30rpx;
+}
+.iPhonex .main-wrap .audio{
+    margin-top:50rpx;
+}
+
+.iPhonex .main-wrap .audio .audio-li{
+    height:60rpx;
+}
+.iPhonex .main-wrap .audio .audio-li .li-bg {
+    top:26rpx;
+}
+.iPhonex .main-wrap .audio .audio-li .txt{
+    padding:18rpx 0;
+}

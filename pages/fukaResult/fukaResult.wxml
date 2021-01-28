@@ -1,0 +1,30 @@
+<!--pages/home/home.wxml-->
+<view class="container {{isIpx ? 'iPhonex' : 'iPhone6'}}" style="padding-top:{{headerHeight+20}}px">
+    <image mode="heightFix" src="{{path+'/bg.jpg'}}" class="page-bg"/>
+    <header></header>
+    <!-- <view class="home-btn" size="mini"  bindtap="goHome">
+        <image mode="widthFix" src="{{path+'/back.png'}}"/>
+    </view> -->
+
+    <view class="fukaResult-box">
+        <view class="txt-box">
+            <image mode="widthFix" src="{{path+'/fukaResult/txt'+posterDataInfo.share_count+'.png'}}" />
+        </view>
+        <view class="fuka-box">
+            <view class="fuka-li" wx:for="{{fukaArr}}">
+                <image mode="widthFix" src="{{path+item.src}}"/>
+                <view class="bg" wx:if="{{item.hidden}}"></view>
+            </view>
+        </view>
+        <view class="tip"><image mode="widthFix" src="{{path+'/fukaResult/tips.png'}}"/></view>
+        <view class="btn-box">
+            <image mode="widthFix" src="{{path+'/fukaResult/git_btn'+posterDataInfo.share_count+'.png'}}" />
+            <button class="share-btn" bindtap="bindShareInfo" wx:if="{{posterDataInfo.share_count < 3}}"></button>
+            <button class="get-coupon" bindtap="goCoupon" wx:if="{{posterDataInfo.share_count == 3}}"></button>
+        </view>
+    </view>
+
+    <dialog bind:myevent="getDialog" isData="{{dialogData}}"></dialog>
+    <!-- 分享提示框 -->
+    <pop-up bind:myevent="getChiild" isHidden="{{isPopUpShow}}" shareId="{{shareId}}" coverPathId="{{posterDataInfo.image_id}}" audioId="{{posterDataInfo.voice_id }}" ></pop-up>
+</view>

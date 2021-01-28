@@ -1,0 +1,28 @@
+/**app.wxss**/
+page{
+  width:100%;
+  height: 100%;
+  overflow: hidden;
+}
+.page-bg{
+  height:100%;
+  position: absolute;
+  top:0;left:0;
+  z-index: 0;
+}
+.container {
+  height: 100%;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; */
+  box-sizing: border-box;
+  background-color: #6f161a;
+  background-size:cover;
+  position: relative;
+  /* padding-top: 130rpx; */
+} 
+
+/* .iPhonex.container{
+  padding-top: 170rpx;
+} */

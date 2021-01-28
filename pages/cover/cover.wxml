@@ -1,0 +1,32 @@
+<!--pages/home/home.wxml-->
+<view class="container {{isIpx ? 'iPhonex' : 'iPhone6'}}">
+    <image mode="heightFix" src="../../public/image/cover/bg.jpg" class="cover-bg" />
+    <view class="cover-box">
+        <view class="cover-img">
+            <image mode="widthFix" src="{{path+'/cover/cover3.png'}}" />
+        </view>
+        <view class="cover-txt">
+            <view class="head-img">
+                <image mode="widthFix" src="{{userInfo.avatarUrl}}" />
+            </view>
+            <view class="name">
+                <text class="nickname txtooverflow">vbibi</text>
+                <text class="txtooverflow">“一起来收听赵丽颖新年原声祝福，定制原声福卡吧。”</text>
+            </view>
+            <view style="width:100%;height:3rpx;background:#d2a672;"></view>
+        </view>
+        <view class="cover-bottom">
+            <image mode="widthFix" src="{{path+'/cover/bottom.png'}}" class="bottom-left" />
+            <!-- <view class="logo-box">
+                <image mode="widthFix" src="{{path+'/cover/logo.png'}}" class="logo" />
+                <view style="display:inline-block;width:1px;height:70rpx;background:#d2a672;vertical-align:top;margin-top:18rpx;"></view>
+            </view>
+            <text></text> -->
+            <image mode="widthFix" src="{{path+'/cover/code.png'}}" class="code" />
+        </view>
+    </view>
+    <view class="canvas-box" > 
+        <canvas style="width:750px;height:1334px" canvas-id="mycanvas" id="mycanvas"/>
+    </view>  
+    <button bindtap="baocun" style="position:absolute;top:20rpx;z-index:10;">点击保存</button>
+</view>

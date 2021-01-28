@@ -1,0 +1,38 @@
+<!--pages/home/home.wxml-->
+<view class="container {{isIpx ? 'iPhonex' : 'iPhone6'}}"  style="padding-top:{{headerHeight+20}}px">
+    <header></header>
+    <!-- <view class="home-btn" size="mini"  bindtap="goHome">
+        <image mode="widthFix" src="{{path+'/back.png'}}"/>
+    </view> -->
+
+    <dialog bind:myevent="getDialog" isData="{{dialogData}}"></dialog>
+    <image mode="heightFix" src="{{path+'/bg.jpg'}}" class="page-bg"/>
+    <view class="cover-box">
+        <view class="cover-img">
+            <image mode="widthFix" src="{{coverPath}}" />
+            <view class="audio-btn" bindtap="audioPlay">
+                <view class="{{isplay ? '' : 'active'}}">
+                    <image mode="widthFix" src="{{path+'/detail/audio_btn.png?v=1'}}"/>
+                    <view class="icon"><image mode="widthFix" src="{{ isplay ? path+'/detail/pause.png' : path+'/detail/play.png'}}"/></view>
+                    <audio src="{{audioUrl}}" id="myAudio" class="audio" bindended="funended"></audio>
+                </view>
+            </view>
+        </view>
+
+        <view class="txt-box">
+            <image mode="widthFix" wx:if="{{!showGoHomeBtn}}" src="{{path+'/detail/txt.png'}}" />
+            <image mode="widthFix" wx:else class="share_txt"  src="{{path+'/detail/txt1.png'}}" />
+        </view>
+        <!-- 朋友进入-跳转首页制作福卡  -->
+        <view class="btn-box"  bindtap="friendShowBtn" wx:if="{{showGoHomeBtn}}">
+            <image mode="widthFix" src="{{path+'/detail/index_btn.png'}}" />
+            <button ></button>
+        </view>
+        <!--自己从首页进入-->
+        <view class="btn-box" wx:else>
+            <image mode="widthFix" src="{{path+'/detail/share_btn.png'}}" />
+            <button bindtap="bindShareBox" ></button>
+        </view>
+    </view>
+    <pop-up bind:myevent="getChiild" isHidden="{{isPopUpShow}}" shareId="{{shareId}}" coverPathId="{{fukaId}}" audioId="{{audioId}}"></pop-up>
+</view>

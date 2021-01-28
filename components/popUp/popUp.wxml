@@ -1,0 +1,40 @@
+<!--pages/home/home.wxml-->
+<view class="pop-up-box {{isHidden ? 'active' : ''}}" wx:if="{{isHidden}}" >
+    <view class="bg"></view>
+
+    <view class="poster" style="padding:0 30rpx;padding-top:{{headerHeight}}px;" wx:if="{{isPoster}}">
+        <image mode="heightFix" src="{{imagePath}}"/>
+    </view>
+
+    <view class="pop-up">
+        <text class="title" wx:if="{{!saveBtn}}">分享至</text>
+        <text class="title" wx:if="{{saveBtn}}">保存海报</text>
+
+        <view class="icon-box" class="icon-box {{!saveBtn ? 'active' : ''}}"  >
+            <view class="weixin-icon">
+                <view class="icon" ><image mode="widthFix" src="{{path + '/detail/share_icon1.png'}}" /></view>
+                <!-- bindtap="goShare" -->
+                <text>微信</text>
+                <button class="share-btn" open-type="share" bindtap="bindShareInfo"></button>
+            </view>
+            <view class="cover-icon">
+                <view class="icon" bindtap="sendCover"><image  mode="widthFix" src="{{path + '/detail/share_icon2.png'}}" /></view>
+                <text>海报</text>
+            </view>
+        </view>
+        <view class="icon-box {{saveBtn ? 'active' : ''}}" >
+            <view class="cover-icon" style="width:100%;">
+                <view class="icon" bindtap="checkAuthentication"><image  mode="widthFix" src="{{path + '/detail/save_icon.png'}}" /></view>
+                <text>保存到相册</text>
+            </view>
+        </view>
+        <view class="cancel-btn" bindtap="cancelPop">
+            取消
+            <!-- <button type="default" plain="true" ></button> -->
+        </view>
+    </view>
+</view>
+<view class="canvas-box" > 
+    <canvas style="width:750px;height:1334px" canvas-id="mycanvas" />
+</view>
+  

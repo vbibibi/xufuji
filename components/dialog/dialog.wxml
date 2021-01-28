@@ -1,0 +1,18 @@
+<!--pages/home/home.wxml-->
+<view class="dialog {{isData.isHidden ? 'active' : ''}}" wx:if="{{isData.isHidden}}" >
+    <view class="bg"></view>
+    <view class="main">
+        <view class="close" bindtap="closeDialog">
+            <image mode="widthFix" src="{{path+'/close.png'}}" />
+        </view>
+        <image mode="widthFix" src="{{path+'/dialog_k.png?v=1'}}" />
+        <view class="txt">
+            <text>{{isData.txt[0]}}</text>
+            <text wx:if="{{isData.txt[1]}}">{{isData.txt[1]}}</text>
+            <text wx:if="{{isData.txt[2]}}">{{isData.txt[2]}}</text>
+        </view>
+    </view>
+
+</view>
+
+  

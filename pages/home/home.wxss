@@ -1,0 +1,15 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  overflow: hidden;
+}
+.container{
+    width:100%;
+    padding:0;
+}
+.container image{
+  width:100%;
+}
+.iPX{
+  margin-top:-28rpx;
+}

@@ -1,0 +1,137 @@
+/* pages/home/home.wxss */
+page {
+    /* width:750px;
+    overflow:auto; */
+}
+.container{
+    background-color: #6f161a;
+    position: relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+view{
+    /* width:100%; */
+    box-sizing: border-box;
+}
+image {
+    display: block;
+    width: 100%;
+}
+
+.txtooverflow {
+    verflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+    overflow:hidden;
+    
+}
+.cover-bg{
+    height:100%;
+}
+.cover-box{
+    padding-top:15rpx;
+    height:100%;
+    width:100%;
+    position:absolute;
+    left:0;top:0;
+    z-index:2;
+}
+.cover-box .cover-img{
+   
+   padding:0 25rpx;
+   overflow:hidden;
+}
+.cover-box .cover-img image{
+    border-radius:20rpx;
+}
+
+
+.cover-txt {
+    padding:15rpx 30rpx;
+    /* margin-top:15rpx; */
+    /* border-bottom:1px solid #d2a672; */
+}
+.cover-txt .head-img{
+    width:75rpx;
+    height:75rpx;
+    border-radius:100%;
+    overflow:hidden;
+    background-color:#fff;
+    display:inline-block;
+    margin-bottom:6rpx;
+}
+.cover-txt .name{
+    display:inline-block;
+    margin-left:20rpx;
+    width:calc(100% - 95rpx);
+    vertical-align:top;
+    
+}
+.cover-txt .name text{
+    display:block;
+    font-size:12px;
+    color:#5e1a0e;
+    
+}
+.cover-txt .name  .nickname{
+    font-weight:bold;
+}
+.cover-bottom {
+    padding-left:57rpx;
+    position:relative;
+}
+.cover-bottom .logo-box{
+    /* padding-right:45rpx; */
+    
+
+}
+.cover-bottom .logo{
+    width:100rpx;
+    display:inline-block;
+    margin-right:45rpx;
+}
+
+.cover-bottom  .bottom-left{
+    width:420rpx;
+}
+.cover-bottom  .code{
+    width:136rpx;
+    position:absolute;
+    right:40rpx;top:0;
+}
+
+.canvas-box {
+    width:0;
+    height:0;
+    overflow:hidden;
+    position:absolute;
+    z-index:-1;
+    top:0;
+    left:1000px;
+    opacity:0;
+    /* display:none; */
+}
+.canvas-box #mycanvas{
+    opacity:0;
+    position:absolute;
+    left:0;top:0;
+    z-index:-1;
+}
+
+/* iPhoneX */
+.iPhonex .cover-box {
+    padding-top:30rpx;
+}
+.iPhonex .cover-txt{
+    margin-top:10rpx;
+}
+.iPhonex .cover-txt .head-img {
+    margin-bottom:10rpx;
+}
+.iPhonex .cover-bottom .bottom-left {
+    width:440rpx;
+}
+.iPhonex .cover-bottom .code {
+    width:160rpx;
+}

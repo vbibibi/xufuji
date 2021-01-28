@@ -1,0 +1,153 @@
+.pop-up-box{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;top:0;
+    z-index:10;
+}
+/* 动画 */
+.pop-up-box.active{
+    animation:mymove 0.2s ;
+    -webkit-animation:mymove 0.2s; /* Safari 和 Chrome */
+}
+@keyframes mymove {
+    0%{
+        transform:translateY(100%);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+@keyframes mymove1 {
+    0%{  opacity: 0;}
+    99%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+.pop-up-box.active .bg {
+    animation:mymove1 0.2s ;
+    -webkit-animation:mymove1 0.2s; /* Safari 和 Chrome */
+}
+.pop-up-box .bg{
+    position:absolute;
+    background:rgba(0,0,0,.5);
+    left:0;top:0;
+    width:100%;height:100%;
+    /* opacity: 0; */
+}
+
+.pop-up-box  .poster{
+    /* height:62%; */
+    height:calc(100% - 375rpx);
+    position:absolute;
+    z-index:100;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pop-up-box  .poster image {
+    height:100%;
+}
+
+.pop-up{
+    width:100%;
+    height:375rpx;
+    /* height:32%; */
+    position:absolute;
+    bottom:0;
+    left:0;
+    background:#fff;
+    border-radius:20rpx 20rpx 0 0;
+}
+
+.iPhone6 .pop-up{
+    /* height:40%; */
+}
+
+.pop-up .title {
+    height:80rpx;
+    line-height:80rpx;
+    font-size:14px;
+    text-align:center;
+    display:block;
+    color:#666;
+    margin-bottom:10rpx;
+}
+
+.pop-up .cancel-btn{
+    width:100%;
+    height:168rpx;
+    /* height:169rpx;
+    position:absolute;
+    bottom:0;left:0; */
+    border-top:1px solid #f0f0f0;
+    /* padding:10rpx 0 30rpx; */
+    font-size: 14px;
+    color:#666;
+    padding-top: 30rpx;
+    text-align: center;
+}
+.pop-up .cancel-btn button{
+    border:0;
+    margin-bottom:30rpx;
+    font-size: 14px;
+    color:#666;
+    font-weight:normal;
+}
+.pop-up .icon-box {
+    padding:0 120rpx;
+    display: none;
+}
+.pop-up .icon-box.active{
+    display: block;
+}
+.pop-up .icon-box .weixin-icon,.pop-up .icon-box .cover-icon {
+    width:50%;
+    text-align:center;
+    display:inline-block;
+    position:relative;
+    margin-bottom:20rpx;
+}
+
+.pop-up .icon-box .weixin-icon .share-btn {
+    opacity:0;
+    width:90rpx;
+    height:90rpx;
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translateX(-50%);
+}
+
+.pop-up .icon-box .icon{
+    width:70rpx;height:70rpx;
+    border-radius:100%;
+    margin:0 auto;
+    margin-bottom:10rpx;
+}
+.pop-up .icon-box .icon image{
+    width:100%;
+}
+.pop-up .icon-box text{
+    font-size:14px;
+    color:#666;
+}
+
+
+.canvas-box {
+    width:0;
+    height:0;
+    overflow:hidden;
+    position:fixed;
+    z-index:-1;
+    top:0;
+    left:1000px;
+    opacity:0; 
+    /* /* display:none;*/
+} 
+/* .canvas-box{
+    opacity:0;
+    position:absolute;
+    left:0;top:0;
+    z-index:-1;
+} */

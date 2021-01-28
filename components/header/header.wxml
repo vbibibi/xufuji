@@ -1,0 +1,10 @@
+<!--pages/home/home.wxml-->
+<view class="header-wrap {{isIpx ? 'iPhonex' : 'iPhone6'}}"  style="padding-top:{{statusBarHeight}}px;height:{{isIpx ? (statusBarHeight*2+6)+'px' : (statusBarHeight*2+30)+'px'}} ">
+    <view class="home-btn" size="mini"  bindtap="goHome" wx:if="{{homeBtn}}">
+        <image mode="widthFix" src="{{path+'/back.png'}}"/>
+    </view>
+    <view class="title" style="line-height:{{isIpx ? statusBarHeight+'px' : statusBarHeight+26+'px'}}">徐福记福卡送30元</view>
+
+</view>
+
+  

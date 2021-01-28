@@ -1,0 +1,103 @@
+<!--pages/home/home.wxml-->
+<view class="container {{isIpx ? 'iPhonex' : 'iPhone6'}}" wx:if="{{isHome}}" style="padding-top:{{headerHeight}}px">
+    <header homeBtn="{{homeBtn}}"></header>
+    <dialog bind:myevent="getDialog" isData="{{dialogData}}"></dialog>
+    <view class="rule-box" wx:if="{{rule}}" style="padding-top:{{headerHeight}}px">
+        <view class="bg"></view>
+        <view class="rule-bg">
+            <view class="close-rule" bindtap="ruleHide"><image mode="widthFix" src="{{path+'/close.png'}}"/></view>
+            <image mode="widthFix" class="bg-k" src="{{path+'/rule_bg.png'}}"/>
+            <view class="rule_txt">
+                <text class="h">1. 活动时间：</text>
+                <view class="p"><text style="display:inline-block;font-weight:bold;">2021年1月21日0:00至2021年2月28日23:59止</text><text style="display:inline-block;">（以下简称为“活动期间”，以活动官网计算机系统时间为标准时间）</text></view>
+                
+                <text class="h">2. 参与方式： </text>
+                <text class="p" selectable >活动时间内，消费者通过微信扫描活动码进入活动链接，自主选择五种福卡任意一种，同时选择赵丽颖原声，点击“生成福卡”，即可定制赵丽颖原声福卡，并邀请三位微信好友助力点击福卡。助力成功后，消费者可跳转到京东到家小程序领券页领取30元京东到家88元满减红包。</text>
+                <text class="p">如未成功获得三位微信好友点击助力，则无法获得30元京东到家88元满减红包。消费者助力成功并成功领取30元京东到家88元满减红包的，可在“京东到家微信小程序/京东到家APP----我的----优惠券”中查看。活动期间内，同一用户可无限次定制并分享福卡，但同一用户仅能领取两个红包且一天最多领取一个红包。助力好友不能为同一用户。</text>
+                
+                <text class="h">3. 红包使用说明及时间</text>
+                <text class="p">1）红包为30元京东到家88元满减优惠券，仅限于购买京东到家徐福记指定产品，红包在活动期间内均可使用，具体使用规则以京东到家平台公布的为准。</text>
+                <text class="p">2）如消费者逾期未领取或逾期未使用红包，视同该消费者自动放弃红包使用资格，主办方将不重新发送且不作任何补偿。</text>
+
+                <text class="h">4. 其他：</text>
+                <text class="p">1）本次活动主办方为东莞徐记食品有限公司。</text>
+                <text class="p">2）活动过程中，同一APP账户，手机号，支付账户，手机终端均视为同一用户。</text>
+                <text class="p">3）如遇意外无法提供指定奖励，主办方有权以同等价值商品或服务替代。</text>
+                <text class="p">4）如对本活动有疑问，请拨打客服热线020-28633338转255（热线服务时间：1月21日至2月28日周一至周五10:00-12:00及14:00-18:00，春节法定假期及周末除外，用户自理话费）。</text>
+                
+                <text class="h">5. 个人信息资料收集和保密声明</text>
+                <text class="p">1）消费者进入本活动时，需要点击同意并授权个人的基本资料给活动主办方使用。</text>
+                <text class="p">2）本活动需搜集的消费者个人信息资料如下，以下资料经消费者明确同意后方进行搜集：①消费者手机号码；②个人微信基本信息资料。消费者须确保所提供的个人资料属实及有效。</text>
+                <text class="p">3）搜集目的和用途：仅限用于本活动参与资格查验、活动数据分析。</text>
+                <text class="p">4）隐私保密的承诺：  </text>
+                <text class="p">①消费者提供的上述个人信息资料数据只会用于上述搜集目的和用途，主办方确保其收集的个人信息资料安全，防止信息泄露、毁损、丢失。</text>
+                <text class="p">②消费者必须授权使用个人微信账号登陆进行互动；若未能及时提供，将不能参加本次活动。</text>
+                <text class="p">③本活动将通过微信收集消费者基本信息，包括：微信信息资料。以上信息将被主办方用于本活动明示的搜集目的和用途。活动主办方将采取适当的规范手段以保护个人信息安全，防止资料丢失、被盗用或遭篡改。</text>
+                <text class="p">④消费者在使用互联网时对个人信息的运用需进行监管和负责，如有通过公告版等形式自愿提供及公开的个人资料被他人使用或传播，与本活动无关。</text>
+                <text class="p">⑤如消费者本人主动将微信账号与密码共享，或因各种不可抗力因素所导致的个人资料泄露、丢失、被盗用或被篡改，主办方不承担任何责任。</text>
+                <text class="p">⑥如经得消费者同意，主办方可使用有关个人资料数据作直接商品促销用途；否则，主办方将不能使用其个人资料作前述直接促销用途。</text>
+                
+                <text class="h">6. 活动声明：</text>
+                <text class="p">任何参与本活动者，在参与本活动前均应阅读本活动规则内容，参与本活动即视为消费者已充分理解并同意以下各项内容：</text>
+                <text class="p">1）未成年人须在事先征得其全部法定监护人的同意后，方可参加本活动。</text>
+                <text class="p">2）若发生违反法律规范或包含侵犯他人隐私等非法内容引起的法律责任，将由发布该内容的消费者个人自行承担，主办方的系统记录有可能作为消费者违反法律的证据。主办方有权自行决定在活动网站上撤换或撤除含有违反法律法规内容或侵犯第三方权利之内容，有权做出独立判断且在无需事先通知的情况下立即取消该上传消费者参与活动的资格。</text>
+                <text class="p">3）消费者应妥善保存好有效的购买凭证和领取凭证，以便主办方核实消费者领取真实性。 </text>
+                <text class="p">4）活动参与过程中如因消费者人为或消费者手机系统或使用网络导致页面关闭，导致无法正常参与活动或者无法领取的,则视为自动放弃资格。主办方不对消费者所发布信息的删除或储存失败承担责任。</text>
+                <text class="p">5）如果因消费者原因（包括但不限于无法联络消费者或消费者不配合）导致无法参与活动或者无法领取的，视为消费者自行放弃参与或领取资格，活动主办方将不作任何形式赔偿也不承担其它责任。</text>
+                <text class="p">6）红包不设退、换服务。非由活动主办方故意或重大过失造成消费者在领取和使用过程中所发生的事故，活动主办方无需承担相应责任。</text>
+                <text class="p">7）为保证活动的公正性和透明度，活动全程及结果都以官方活动网站公布为准，其他未授权媒体公布的失实消息主办方不承担任何责任。</text>
+                <text class="p">8）如发现消费者在活动中使用任何不正当的手段参加活动，活动主办方有权在不事先通知的前提下取消其参加资格。包括但不限于：</text>
+                
+                <text class="p">①同一消费者或IP地址注册多个账号，利用软件或人工方法反复参与活动；</text>
+                <text class="p">②同一活动消费者盗用、借用他人已有账号参与活动或盗用、借用他人信息注册账号参与活动，提高兑换几率；</text>
+                <text class="p">③利用活动的规则或技术漏洞刷票；</text>
+                <text class="p">凡发现有以上行为的消费者，将被取消活动资格，并不另行通知。</text>
+                <text class="p">9）活动主办方将会在法律允许的范围内对本次活动给予合理解释和说明。如遇不可抗力因素，活动主办方有权取消本次活动。</text>
+                <text class="p">10）消费者兑换过程中所发生的个人费用（包含但不限于上网费、手机流量费、短信费、咨询客服电话费）需自理，主办方不做任何形式的补偿。</text>
+                <text class="p">11）活动过程中出现“不可抗力”事件或计算机系统故障直接或间接地造成活动主办方无法履行其全部或部分义务，则活动主办方将免予履行该义务，并无需承担相应的责任。“不可抗力”事件包括但不限于，地震、台风、火灾、水灾、战争、法律法规调整、政府政策变更命令禁止、因黑客攻击、计算机病毒影响、系统崩溃、数据丢失或其他人为原因造成计算机系统故障，及其他自然或人为灾害等导致活动无法继续开展的，且活动主办方不可预见、无法避免并无法控制的事件。</text>
+                <text class="p">12）活动过程中，如因政府政策变革法律法规调整或行政命令要求，活动主办方有权根据上述调整或要求随时调整活动内容及规则。活动内容及规则调整时，活动主办方将另行向活动消费者公告通知相关的调整，但无需征得活动消费者的同意。主办方有权根据法律法规、司法或行政命令的要求以及活动的实际情况，在法律允许的范围内随时取消、中止或终止此次活动。本次活动红包由活动承办方具体提供，使用红包的相关限制及注意事项以具体服务提供商的要求为准。对于消费者在领取和使用过程中发生的任何伤害和损失，如该伤害和损失非由主办方之过错导致，主办方不承担任何责任。</text>
+                <text class="p">13）消费者需就因其违反本条款及细则的任何规定、侵犯他人权利或其他任何违法的行为而引起的所有索偿、责任、损失、损害、费用和开支对主办方做出补偿。</text>
+                <text class="p">14）本活动适用中华人民共和国法律。因本活动引起的或本活动有关的任何争议，由争议双方友好协商解决。如任何争议不能通过双方友好协商解决的，可通过其他有效法律途径征求最终解决方式。</text>
+                <text class="p">15）活动主办方、本促销活动的承办方、广告公司、印刷商和相关合作企业之员工、家属，不可参加此次促销活动, 以示公允。</text>
+            </view>
+        </view>
+    </view>
+    <image mode="heightFix" src="{{path+'/bg.jpg'}}" class="page-bg"/>
+    <view class="kv">
+        <image mode="widthFix" src="{{path+'/home/kv_new.png'}}" />
+        <view class="rule-btn" bindtap="ruleShow">
+            <image mode="widthFix" src="{{path+'/home/rule_btn.png'}}" />
+        </view>
+    </view>
+    <view class="main-wrap">
+        <view class="fuka">
+            <image mode="widthFix" class="title" src="{{path+'/home/title_1.png'}}" />
+            <view class="fuka-box">
+                <!-- <image mode="widthFix" class="fuka-img" src="{{path+'/home/five_fu_card.png'}}"/> -->
+                <view class="fuka-ul">
+                    <view class="fuka-li {{currentFukaId==item.id ? 'active' : ''}}" wx:for="{{fukaArr}}" bindtap="fukaClick" data-index="{{index}}">
+                        <view class="fuka_active"></view>
+                        <image mode="widthFix" src="{{path+'/home/fuk'+item.id+'.png'}}"/>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="audio">
+            <image mode="widthFix" class="title" src="{{path+'/home/title_2.png'}}" />
+            <view class="audio-ul">
+                <view class="audio-li {{currentAudioId==item.id ? 'active' : ''}}" wx:for="{{audioArr}}" catchtap="audioClick" data-index="{{item.id}}">
+                    <view class="li-bg"></view>
+                    <image mode="widthFix" class="icon" src="{{ item.isplay ? path+'/home/pause_icon.png': path+'/home/play_icon.png'}}" data-id="{{item.id}}" />
+                    <image mode="widthFix" class="txt" src="{{path+'/home/fuk_txt'+item.id+'.png?v=3'}}" />
+                    <audio poster="" name="" author="" src="{{item.url}}" id="{{'myAudio'+item.id}}" class="audio_item" bindended="funended"></audio>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+    <view class="go_btn">
+        <button type="primary" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo"></button>
+        <!-- <button type="primary" bindtap="loginFunc"></button> -->
+        <image mode="widthFix" src="{{path+'/home/fucard_btn.png'}}" />
+    </view>
+</view>

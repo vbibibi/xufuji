@@ -1,0 +1,138 @@
+/* pages/home/home.wxss */
+.container{
+    background-color: #6f161a;
+    position: relative;
+    /* padding-top:160rpx; */
+}
+.iPhonex.container{
+    /* padding-top: 220rpx; */
+}
+
+view{
+    width:100%;
+    box-sizing: border-box;
+}
+image {
+    display: block;
+    width: 100%;
+}
+
+.home-btn{
+    width: 60rpx;
+    height: 60rpx;
+    position: fixed;
+    left:20rpx;
+    top:20rpx;
+    z-index: 10;
+    /* border:1px solid #fff; */
+    background-color: rgba(0,0,0,.4);
+    border-radius: 100%;
+    padding:12rpx;
+}
+
+.audio{
+    position: absolute;
+    width: 0;height: 0;
+}
+.cover-box{
+   position: relative;
+   z-index: 1;
+}
+.cover-box .cover-img{
+    /* width:559rpx; */
+    /* min-height:950rpx; */
+    width:511rpx;
+    min-height:904rpx;
+    margin:0 auto;
+    position: relative;
+    border:6rpx solid #f8d690;
+    box-shadow:12rpx 8rpx 30rpx #000;
+}
+
+.cover-box .cover-img .audio-btn {
+    width:261rpx;
+    height: 95rpx;
+    position: absolute;
+    left:10rpx;
+    /* bottom:40rpx; */
+    bottom:15rpx;
+}
+
+.cover-box .cover-img .audio-btn .active{
+    width: 100%;
+    height:100%;
+    transform-origin: center;
+    animation:mymove2 1.2s ease-in-out infinite ;
+    -webkit-animation:mymove2 1.2s ease-in-out infinite; /* Safari 和 Chrome */
+}
+@keyframes mymove2 {
+    /* 10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(+2px, 0, 0); }
+    30%, 70% { transform: translate3d(-3px, 0, 0); }
+    40%, 60% { transform: translate3d(+3px, 0, 0); }
+    50% { transform: translate3d(-3px, 0, 0); } */
+    0%{
+        transform: scale(1)
+    }
+   
+    50%{
+        transform: scale(.96) 
+    }
+    
+    100%{ 
+        transform: scale(1) 
+    }
+}
+.cover-box .cover-img .audio-btn .icon{
+    width:56rpx;
+    position: absolute;
+    left:15rpx;
+    top:15rpx;
+    /* transform: translateY(-50%); */
+}
+
+.txt-box {
+    /* width:402rpx; */
+    margin-top:40rpx;
+}
+.txt-box image {
+    width:402rpx;
+    margin:0 auto 10rpx;
+}
+.txt-box .share_txt {
+    width: 517rpx;
+    height:89rpx;
+    margin:50rpx auto 10rpx;
+}
+.btn-box{
+    width:333rpx;
+    height:79rpx;
+    margin:0 auto 0;
+    position: relative;
+    z-index: 10;
+    /* position: absolute;
+    bottom:20rpx;
+    left:50%;
+    transform: translateX(-50%); */
+}
+.btn-box button{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;top:0;
+    z-index: 2;
+}
+
+/* iPhoneX */
+.iPhonex .cover-box {
+    margin-top:30rpx;
+}
+.iPhonex .cover-img {
+    width:559rpx;
+    /* transform: translateX(22rpx); */
+}
+.iPhonex .txt-box {
+    /* width:450rpx; */
+    margin:50rpx auto 20rpx;
+}

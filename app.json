@@ -1,0 +1,31 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/home/home",
+    "pages/cover/cover",
+    "pages/fukaResult/fukaResult",
+    "pages/detail/detail",
+    "pages/logs/logs",
+    "components/popUp/popUp",
+    "components/dialog/dialog"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "徐福记福卡送30元",
+    "navigationBarTextStyle":"black",
+    "navigationStyle": "custom"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxffb7d80f8c50ac5c"
+  ],
+  "usingComponents": {
+    "pop-up": "/components/popUp/popUp",
+    "dialog": "/components/dialog/dialog",
+    "header": "/components/header/header"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

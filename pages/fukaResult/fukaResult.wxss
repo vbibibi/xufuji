@@ -1,0 +1,107 @@
+/* pages/home/home.wxss */
+.container{
+    background-color: #6f161a;
+    position: relative;
+    /* padding-top:160rpx; */
+}
+.iPhonex.container{
+    /* padding-top: 220rpx; */
+}
+view{
+    width:100%;
+    box-sizing: border-box;
+}
+image {
+    display: block;
+    width: 100%;
+}
+
+.home-btn{
+    width: 60rpx;
+    height: 60rpx;
+    position: fixed;
+    left:20rpx;
+    top:20rpx;
+    z-index: 10;
+    background-color: rgba(0,0,0,.4);
+    border-radius: 100%;
+    padding:12rpx;
+}
+
+
+.txt-box {
+    width:317rpx;
+    margin:0 auto;
+}
+.fukaResult-box{
+    position: relative;
+    z-index: 1;
+    min-height: 400rpx;
+}
+.fuka-box .fuka-li{
+    width:245rpx;
+    display: inline-block;
+    /* margin-left:-48rpx; */
+    margin-top:0rpx;
+    position:relative;
+}
+.fuka-box .fuka-li .bg {
+    background-color:#000;
+    opacity: 0.5;
+    /* width: 66%; */
+    /* height: 77%; */
+    width: 75%;
+    height:80%;
+    position: absolute;
+    left: 30rpx;
+    top: 30rpx;
+    /* left: 48rpx;
+    top: 48rpx; */
+
+}
+.fuka-box .fuka-li:first-child{
+    /* transform: translateX(130rpx); */
+    margin-left: 126rpx;
+}
+/* .fuka-box .fuka-li:first-child .bg,.fuka-box .fuka-li:nth-of-type(2) .bg{
+    display:none;
+} */
+.fuka-box .fuka-li:nth-of-type(3){
+    margin-left: 10rpx;
+}
+
+.tip{
+    width:163rpx;
+    margin:20rpx auto 0;
+}
+
+.btn-box{
+    width:421rpx;
+    height:79rpx;
+    margin:20rpx auto 0;
+    position: relative;
+    /* position: absolute;
+    bottom:20rpx;
+    left:50%;
+    transform: translateX(-50%); */
+}
+.btn-box button{
+    position: absolute;
+    left:0;top:0;
+    width:100%;
+    height:100%;
+    opacity: 0;
+}
+/* iPhoneX */
+.iPhonex .tip {
+    width:190rpx;
+    margin-top:60rpx;
+}
+
+.iPhonex .fuka-box {
+    margin-top:20rpx;
+}
+
+.iPhonex .fuka-box .fuka-li {
+    margin-top:0;
+}
